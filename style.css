@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500&family=Overpass:wght@400;500&family=Roboto:wght@400;700&display=swap");
+
+:root {
+  /*colors*/
+  --tomato: hsl(4, 100%, 67%);
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+
+  /*fonts*/
+  --ff-main: Roboto;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--Charcoal-Grey);
+  font-family: var(--ff-main);
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: var(--Dark-Slate-Grey);
+}
+.container,
+.thank-page {
+  background-color: var(--White);
+  border-radius: 25px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  width: 700px;
+}
+.main-text {
+  width: 350px;
+  margin-left: 1.5em;
+  margin-top: 1.2em;
+  margin-bottom: 1em;
+}
+.main-text h1 {
+  margin-bottom: 1em;
+  font-size: xx-large;
+}
+.main-text p {
+  margin-bottom: 1em;
+  font-size: 14px;
+}
+.text {
+  margin-bottom: 0.5em;
+  font-size: smaller;
+}
+.list-icon {
+  width: 12px;
+  margin-right: 0.2em;
+  margin-top: 0.5em;
+}
+.text span {
+  font-size: 13px;
+}
+.main-form {
+  margin-top: 2.3em;
+}
+.main-img {
+  max-width: 250px;
+  width: 100%;
+  background-size: cover;
+}
+#img2 {
+  display: none;
+}
+label[for="email"] {
+  color: var(--Dark-Slate-Grey);
+  font-size: 12px;
+  font-weight: bold;
+}
+input[type="email"] {
+  width: 100%;
+  padding: 0.5em;
+}
+input[type="submit"],
+.dismiss-btn {
+  padding: 1em;
+  margin-top: 1em;
+  width: 100%;
+  background-color: var(--Dark-Slate-Grey);
+  border: none;
+  border-radius: 10px;
+  color: var(--White);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.form-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -1em;
+}
+#error-msg {
+  color: var(--tomato);
+  font-size: 12px;
+  display: none;
+}
+
+input[type="submit"]:hover {
+  background-image: linear-gradient(hsl(4, 100%, 67%), rgb(193, 101, 101));
+}
+.dismiss-btn:hover {
+  background-image: linear-gradient(hsl(4, 100%, 67%), rgb(193, 101, 101));
+}
+.thank-page {
+  padding: 2em;
+
+  width: 300px;
+}
+.success-icon {
+  width: 30px;
+}
+.thank-h2 {
+  margin: 0.5em 0;
+  font-size: xx-large;
+}
+.thank-p {
+  margin: 1em 0;
+  font-size: 10px;
+  line-height: 1.5em;
+  color: var(--Dark-Slate-Grey);
+}
+
+.confirmation-email {
+  font-weight: bold;
+}
+.hidden {
+  display: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  bottom: 0;
+  position: absolute;
+}
+
+.attribution a {
+  color: hsl(225, 7%, 44%);
+}
+@media (max-width: 500px) {
+  body {
+    background-color: var(--White);
+  }
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    background-color: var(--White);
+  }
+  .main-img {
+    display: none;
+  }
+  #img2 {
+    display: block;
+  }
+  .attribution {
+    display: none;
+  }
+}
+@media (max-width: 706px) and (min-width: 500px) {
+  .container {
+    width: 500px;
+  }
+  .main-img {
+    width: 230px;
+  }
+  .main-text {
+    margin-left: 0;
+    margin-right: 2em;
+    font-size: smaller;
+  }
+}
